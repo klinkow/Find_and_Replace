@@ -15,4 +15,8 @@ describe('String#find_and_replace') do
       expect("I work parttime".find_and_replace("part","fart")).to(eq("I work farttime"))
   end
 
+  it("Takes two words and replaces all instances of the specified word with the new specified word without changing the case of the first letter") do
+      expect("Catherine's cats".find_and_replace("cat","dog")).to(eq("Dogherine's dogs"))
+  end
+
 end
