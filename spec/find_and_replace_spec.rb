@@ -19,4 +19,8 @@ describe('String#find_and_replace') do
       expect("Catherine's cats".find_and_replace("cat","dog")).to(eq("Dogherine's dogs"))
   end
 
+  it("Takes two words and replaces all instances of the specified word with the new specified word without changing the case of the first letter") do
+      expect("McCatherine went to the store".find_and_replace("McCatherine", "dog")).to(eq("Dog went to the store"))
+  end
+
 end
